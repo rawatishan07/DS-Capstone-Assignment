@@ -1,0 +1,58 @@
+──────────────────────────────────────────────────
+  1. PROFILES — add / get / update
+──────────────────────────────────────────────────
+  ✅ PASS  Add new user 'zara'
+  ✅ PASS  Duplicate user rejected
+  ✅ PASS  Get existing profile (alice)
+  ✅ PASS  Get non-existent profile returns error
+  ✅ PASS  Update alice's age
+  ✅ PASS  Alice age is now 22
+  ✅ PASS  Update alice's interests
+  ✅ PASS  Interests stored as list
+  ✅ PASS  Update non-existent user returns error
+
+──────────────────────────────────────────────────
+  2. GRAPH — add / remove / list friendships
+──────────────────────────────────────────────────
+  ✅ PASS  Add friendship zara-alice
+  ✅ PASS  Zara's friends include alice
+  ✅ PASS  Friendship is undirected (alice has zara)
+  ✅ PASS  Self-friendship rejected
+  ✅ PASS  Duplicate friendship rejected
+  ✅ PASS  Remove alice-carol friendship
+  ✅ PASS  Carol no longer in alice's friends
+  ✅ PASS  Remove non-existent friendship returns error
+
+──────────────────────────────────────────────────
+  3. BFS — Shortest Path
+──────────────────────────────────────────────────
+  ✅ PASS  BFS: alice to bob (direct friend)
+  ✅ PASS  BFS path starts at alice, ends at bob
+  ✅ PASS  BFS: alice to dave (2 hops)
+  ✅ PASS  BFS: alice to henry (3 hops)
+  ✅ PASS  BFS: same src and dst returns 0 degrees
+  ✅ PASS  BFS: zara to henry via alice chain
+
+──────────────────────────────────────────────────
+  4. DFS — Friends-of-Friends Exploration
+──────────────────────────────────────────────────
+  ✅ PASS  DFS depth=1 returns alice's direct friends
+  ✅ PASS  DFS depth=1 includes bob
+  ✅ PASS  DFS depth=2 discovers deeper users
+  ✅ PASS  DFS depth=3 discovers more users than depth=2
+  ✅ PASS  DFS on unknown user returns error
+
+──────────────────────────────────────────────────
+  5. RECOMMENDATIONS — ranked by common interests
+──────────────────────────────────────────────────
+  ✅ PASS  Recommendations returned for alice
+  ✅ PASS  At least 1 recommendation
+  ✅ PASS  Alice not in her own recommendations
+  ✅ PASS  Direct friends excluded from recs
+  ✅ PASS  Recommendations sorted by common interests (desc)
+  ✅ PASS  Rec entry has all required keys
+  ✅ PASS  Recs for unknown user returns error
+
+==================================================
+  RESULTS:  35 passed   0 failed   (35/35)
+==================================================
